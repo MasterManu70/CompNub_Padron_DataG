@@ -1,0 +1,16 @@
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\bin\Debug\CompNub_Padron_DataG.exe.config
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\bin\Debug\CompNub_Padron_DataG.exe
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\bin\Debug\CompNub_Padron_DataG.pdb
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\bin\Debug\MySql.Data.dll
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\bin\Debug\Google.Protobuf.dll
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\bin\Debug\Renci.SshNet.dll
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\bin\Debug\MySql.Data.xml
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\obj\Debug\CompNub_Padron_DataG.csprojAssemblyReference.cache
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\obj\Debug\CompNub_Padron_DataG.Properties.Resources.resources
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\obj\Debug\CompNub_Padron_DataG.csproj.GenerateResource.cache
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\obj\Debug\CompNub_Padron_DataG.csproj.CopyComplete
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\obj\Debug\CompNub_Padron_DataG.exe
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\obj\Debug\CompNub_Padron_DataG.pdb
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\obj\Debug\CompNub_Padron_DataG.Form1.resources
