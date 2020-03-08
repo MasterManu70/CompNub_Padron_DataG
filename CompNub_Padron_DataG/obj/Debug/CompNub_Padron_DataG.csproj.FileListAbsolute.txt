@@ -14,3 +14,8 @@ C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\obj\Debug\
 C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\obj\Debug\CompNub_Padron_DataG.exe
 C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\obj\Debug\CompNub_Padron_DataG.pdb
 C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\obj\Debug\CompNub_Padron_DataG.Form1.resources
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\bin\Debug\Interop.WMPLib.dll
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\obj\Debug\Interop.WMPLib.dll
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\m_adr\source\repos\CompNub_Padron_DataG\CompNub_Padron_DataG\obj\Debug\CompNub_Padron_DataG.csproj.ResolveComReference.cache
