@@ -125,7 +125,7 @@ namespace CompNub_Padron_DataG
             bool rowColor = true;
             string g = "M";
             dataGridView1.Rows.Clear();
-            ConexionMySQL(query + " where a.completo like '%" + textBox1.Text + "%' " + alterQuery(textBox1.Text) + " limit " + numericUpDown1.Value + ";");
+            ConexionMySQL(query + " where a.completo like '%" + textBox1.Text + "%' " + alterQuery(textBox1.Text) + " limit "+ numericUpDown2.Value + "," + numericUpDown1.Value + ";");
             for (int i = 0; i < ds.Tables["tabla"].Rows.Count; i++)
             {
                 dataGridView1.Rows.Add();
@@ -192,7 +192,14 @@ namespace CompNub_Padron_DataG
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string index = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            string index = "1";
+            try
+            {
+                index = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            }
+            catch (Exception)
+            {
+            }
 
             axWindowsMediaPlayer1.URL = "resources\\vid\\video" + index.ToString() + ".mp4";
             pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "resources\\img\\foto" + index.ToString() + ".png"));
