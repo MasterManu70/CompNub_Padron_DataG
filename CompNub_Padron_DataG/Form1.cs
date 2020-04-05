@@ -17,7 +17,7 @@ namespace CompNub_Padron_DataG
     {
         public bool avanzado = false;
         public int limitR = 30;
-        public string query = @"select * from
+        public static string query = @"select * from
                             (select 
                             ciudadanos.id,
                             ciudadanos.clave,
@@ -123,7 +123,7 @@ namespace CompNub_Padron_DataG
         private void button1_Click(object sender, EventArgs e)
         {
             bool rowColor = true;
-            string g = "M";
+            string g;
             dataGridView1.Rows.Clear();
             ConexionMySQL(query + " where a.completo like '%" + textBox1.Text + "%' " + alterQuery(textBox1.Text) + " limit "+ numericUpDown2.Value + "," + numericUpDown1.Value + ";");
             for (int i = 0; i < ds.Tables["tabla"].Rows.Count; i++)
@@ -133,7 +133,7 @@ namespace CompNub_Padron_DataG
                 dataGridView1.Rows[i].Cells[1].Value = Convert.ToString(ds.Tables["tabla"].Rows[i]["clave"]);
                 dataGridView1.Rows[i].Cells[2].Value = Convert.ToString(ds.Tables["tabla"].Rows[i]["nacio"]);
                 dataGridView1.Rows[i].Cells[3].Value = Convert.ToString(ds.Tables["tabla"].Rows[i]["estado"]);
-                if (ds.Tables["tabla"].Rows[i]["genero"].ToString() == "1") g = "M"; else g = "F";
+                if (ds.Tables["tabla"].Rows[i]["genero"].ToString() == "True") g = "M"; else g = "F";
                 dataGridView1.Rows[i].Cells[4].Value = g;
                 dataGridView1.Rows[i].Cells[5].Value = Convert.ToString(ds.Tables["tabla"].Rows[i]["local"]);
                 dataGridView1.Rows[i].Cells[6].Value = Convert.ToString(ds.Tables["tabla"].Rows[i]["completo"]);
@@ -199,11 +199,60 @@ namespace CompNub_Padron_DataG
             }
             catch (Exception)
             {
+
             }
 
-            axWindowsMediaPlayer1.URL = "resources\\vid\\video" + index.ToString() + ".mp4";
-            pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "resources\\img\\foto" + index.ToString() + ".png"));
-            axWindowsMediaPlayer2.URL = "resources\\aud\\audio" + index.ToString() + ".mp3";
+            try
+            {
+                axWindowsMediaPlayer1.URL = "resources\\vid\\video" + index.ToString() + ".mp4";
+                pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "resources\\img\\foto" + index.ToString() + ".png"));
+                axWindowsMediaPlayer2.URL = "resources\\aud\\audio" + index.ToString() + ".mp3";
+            }
+            catch (Exception)
+            {
+                axWindowsMediaPlayer1.URL = "resources\\vid\\video1.mp4";
+                pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "resources\\img\\foto1.png"));
+                axWindowsMediaPlayer2.URL = "resources\\aud\\audio1.mp3";
+            }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            List<string> ciudadano = new List<string>();
+            //string index = "1";
+            try
+            {
+                ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
+                ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
+                ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString());
+                ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString());
+                ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString());
+                ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString());
+                ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString());
+                ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString());
+                ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString());
+                ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString());
+                ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[13].Value.ToString());
+                ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[14].Value.ToString());
+                ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[15].Value.ToString());
+                ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[16].Value.ToString());
+                ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[17].Value.ToString());
+                ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[18].Value.ToString());
+            }
+            catch (Exception)
+            {
+            }
+            Ciudadano window = new Ciudadano(ciudadano);
+            window.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            List<string> ciudadano = new List<string>();
+            Ciudadano window = new Ciudadano(ciudadano);
+            window.Show();
         }
     }
 }

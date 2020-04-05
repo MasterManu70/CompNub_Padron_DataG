@@ -33,30 +33,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBox13 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nacio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,7 +59,27 @@
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -85,7 +88,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -125,6 +127,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar";
             // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(175, 37);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            435932,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(79, 20);
+            this.numericUpDown2.TabIndex = 4;
+            // 
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(48, 37);
@@ -141,6 +155,15 @@
             0,
             0,
             0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(133, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Índice";
             // 
             // label1
             // 
@@ -171,7 +194,7 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(12, 80);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(860, 332);
+            this.groupBox2.Size = new System.Drawing.Size(860, 403);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registros";
@@ -180,7 +203,6 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -220,9 +242,141 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(848, 307);
+            this.dataGridView1.Size = new System.Drawing.Size(848, 378);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 47;
+            // 
+            // clave
+            // 
+            this.clave.HeaderText = "CLAVE";
+            this.clave.Name = "clave";
+            this.clave.ReadOnly = true;
+            this.clave.Width = 55;
+            // 
+            // nacio
+            // 
+            this.nacio.HeaderText = "NACIO";
+            this.nacio.Name = "nacio";
+            this.nacio.ReadOnly = true;
+            this.nacio.Width = 50;
+            // 
+            // estado
+            // 
+            this.estado.HeaderText = "ESTADO";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            this.estado.Width = 60;
+            // 
+            // genero
+            // 
+            this.genero.HeaderText = "SEXO";
+            this.genero.Name = "genero";
+            this.genero.ReadOnly = true;
+            this.genero.Width = 40;
+            // 
+            // local
+            // 
+            this.local.HeaderText = "LOCAL";
+            this.local.Name = "local";
+            this.local.ReadOnly = true;
+            this.local.Width = 50;
+            // 
+            // completo
+            // 
+            this.completo.HeaderText = "NOMBRE COMPLETO";
+            this.completo.Name = "completo";
+            this.completo.ReadOnly = true;
+            this.completo.Width = 300;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "NOMBRE(S)";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.Width = 150;
+            // 
+            // paterno
+            // 
+            this.paterno.HeaderText = "PATERNO";
+            this.paterno.Name = "paterno";
+            this.paterno.ReadOnly = true;
+            this.paterno.Width = 150;
+            // 
+            // materno
+            // 
+            this.materno.HeaderText = "MATERNO";
+            this.materno.Name = "materno";
+            this.materno.ReadOnly = true;
+            this.materno.Width = 150;
+            // 
+            // fecha
+            // 
+            this.fecha.HeaderText = "FECHA";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            this.fecha.Width = 70;
+            // 
+            // domicilio
+            // 
+            this.domicilio.HeaderText = "DOMICILIO";
+            this.domicilio.Name = "domicilio";
+            this.domicilio.ReadOnly = true;
+            this.domicilio.Width = 150;
+            // 
+            // distrito
+            // 
+            this.distrito.HeaderText = "DISTRITO";
+            this.distrito.Name = "distrito";
+            this.distrito.ReadOnly = true;
+            this.distrito.Width = 70;
+            // 
+            // colonia
+            // 
+            this.colonia.HeaderText = "COLONIA";
+            this.colonia.Name = "colonia";
+            this.colonia.ReadOnly = true;
+            // 
+            // cp
+            // 
+            this.cp.HeaderText = "CP";
+            this.cp.Name = "cp";
+            this.cp.ReadOnly = true;
+            this.cp.Width = 40;
+            // 
+            // ocupacion
+            // 
+            this.ocupacion.HeaderText = "OCUPACIÓN";
+            this.ocupacion.Name = "ocupacion";
+            this.ocupacion.ReadOnly = true;
+            // 
+            // numero
+            // 
+            this.numero.HeaderText = "NÚMERO";
+            this.numero.Name = "numero";
+            this.numero.ReadOnly = true;
+            this.numero.Width = 65;
+            // 
+            // ciudad
+            // 
+            this.ciudad.HeaderText = "CIUDAD";
+            this.ciudad.Name = "ciudad";
+            this.ciudad.ReadOnly = true;
+            this.ciudad.Width = 60;
+            // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "CÓDIGO";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            this.codigo.Width = 120;
             // 
             // groupBox3
             // 
@@ -385,7 +539,7 @@
             this.groupBox4.Controls.Add(this.pictureBox1);
             this.groupBox4.Controls.Add(this.axWindowsMediaPlayer2);
             this.groupBox4.Controls.Add(this.axWindowsMediaPlayer1);
-            this.groupBox4.Location = new System.Drawing.Point(12, 418);
+            this.groupBox4.Location = new System.Drawing.Point(12, 518);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(860, 231);
             this.groupBox4.TabIndex = 5;
@@ -419,174 +573,46 @@
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(280, 206);
             this.axWindowsMediaPlayer1.TabIndex = 0;
             // 
-            // label2
+            // button2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(133, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Índice";
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(789, 489);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Agregar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // numericUpDown2
+            // button3
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(175, 37);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            435932,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(79, 20);
-            this.numericUpDown2.TabIndex = 4;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 47;
-            // 
-            // clave
-            // 
-            this.clave.HeaderText = "CLAVE";
-            this.clave.Name = "clave";
-            this.clave.ReadOnly = true;
-            this.clave.Width = 55;
-            // 
-            // nacio
-            // 
-            this.nacio.HeaderText = "NACIO";
-            this.nacio.Name = "nacio";
-            this.nacio.ReadOnly = true;
-            this.nacio.Width = 50;
-            // 
-            // estado
-            // 
-            this.estado.HeaderText = "ESTADO";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            this.estado.Width = 60;
-            // 
-            // genero
-            // 
-            this.genero.HeaderText = "SEXO";
-            this.genero.Name = "genero";
-            this.genero.ReadOnly = true;
-            this.genero.Width = 40;
-            // 
-            // local
-            // 
-            this.local.HeaderText = "LOCAL";
-            this.local.Name = "local";
-            this.local.ReadOnly = true;
-            this.local.Width = 50;
-            // 
-            // completo
-            // 
-            this.completo.HeaderText = "NOMBRE COMPLETO";
-            this.completo.Name = "completo";
-            this.completo.ReadOnly = true;
-            this.completo.Width = 300;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "NOMBRE(S)";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.Width = 150;
-            // 
-            // paterno
-            // 
-            this.paterno.HeaderText = "PATERNO";
-            this.paterno.Name = "paterno";
-            this.paterno.ReadOnly = true;
-            this.paterno.Width = 150;
-            // 
-            // materno
-            // 
-            this.materno.HeaderText = "MATERNO";
-            this.materno.Name = "materno";
-            this.materno.ReadOnly = true;
-            this.materno.Width = 150;
-            // 
-            // fecha
-            // 
-            this.fecha.HeaderText = "FECHA";
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
-            this.fecha.Width = 70;
-            // 
-            // domicilio
-            // 
-            this.domicilio.HeaderText = "DOMICILIO";
-            this.domicilio.Name = "domicilio";
-            this.domicilio.ReadOnly = true;
-            this.domicilio.Width = 150;
-            // 
-            // distrito
-            // 
-            this.distrito.HeaderText = "DISTRITO";
-            this.distrito.Name = "distrito";
-            this.distrito.ReadOnly = true;
-            this.distrito.Width = 70;
-            // 
-            // colonia
-            // 
-            this.colonia.HeaderText = "COLONIA";
-            this.colonia.Name = "colonia";
-            this.colonia.ReadOnly = true;
-            // 
-            // cp
-            // 
-            this.cp.HeaderText = "CP";
-            this.cp.Name = "cp";
-            this.cp.ReadOnly = true;
-            this.cp.Width = 40;
-            // 
-            // ocupacion
-            // 
-            this.ocupacion.HeaderText = "OCUPACIÓN";
-            this.ocupacion.Name = "ocupacion";
-            this.ocupacion.ReadOnly = true;
-            // 
-            // numero
-            // 
-            this.numero.HeaderText = "NÚMERO";
-            this.numero.Name = "numero";
-            this.numero.ReadOnly = true;
-            this.numero.Width = 65;
-            // 
-            // ciudad
-            // 
-            this.ciudad.HeaderText = "CIUDAD";
-            this.ciudad.Name = "ciudad";
-            this.ciudad.ReadOnly = true;
-            this.ciudad.Width = 60;
-            // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "CÓDIGO";
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            this.codigo.Width = 120;
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Location = new System.Drawing.Point(708, 489);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Reporte";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 661);
+            this.ClientSize = new System.Drawing.Size(884, 761);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.MinimumSize = new System.Drawing.Size(900, 700);
+            this.MinimumSize = new System.Drawing.Size(900, 800);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CompNub";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -596,7 +622,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -649,6 +674,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn ciudad;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 
