@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -40,25 +40,6 @@
             this.checkBox13 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nacio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.local = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.completo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.distrito = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colonia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ocupacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.checkBox10 = new System.Windows.Forms.CheckBox();
@@ -78,6 +59,27 @@
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nacio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.local = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.completo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.distrito = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colonia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ocupacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.STATUS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.checkBox14 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -113,6 +115,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.checkBox14);
             this.groupBox1.Controls.Add(this.numericUpDown2);
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.label2);
@@ -207,14 +210,14 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -235,7 +238,8 @@
             this.ocupacion,
             this.numero,
             this.ciudad,
-            this.codigo});
+            this.codigo,
+            this.STATUS});
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(6, 19);
             this.dataGridView1.Name = "dataGridView1";
@@ -246,137 +250,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 47;
-            // 
-            // clave
-            // 
-            this.clave.HeaderText = "CLAVE";
-            this.clave.Name = "clave";
-            this.clave.ReadOnly = true;
-            this.clave.Width = 55;
-            // 
-            // nacio
-            // 
-            this.nacio.HeaderText = "NACIO";
-            this.nacio.Name = "nacio";
-            this.nacio.ReadOnly = true;
-            this.nacio.Width = 50;
-            // 
-            // estado
-            // 
-            this.estado.HeaderText = "ESTADO";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            this.estado.Width = 60;
-            // 
-            // genero
-            // 
-            this.genero.HeaderText = "SEXO";
-            this.genero.Name = "genero";
-            this.genero.ReadOnly = true;
-            this.genero.Width = 40;
-            // 
-            // local
-            // 
-            this.local.HeaderText = "LOCAL";
-            this.local.Name = "local";
-            this.local.ReadOnly = true;
-            this.local.Width = 50;
-            // 
-            // completo
-            // 
-            this.completo.HeaderText = "NOMBRE COMPLETO";
-            this.completo.Name = "completo";
-            this.completo.ReadOnly = true;
-            this.completo.Width = 300;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "NOMBRE(S)";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.Width = 150;
-            // 
-            // paterno
-            // 
-            this.paterno.HeaderText = "PATERNO";
-            this.paterno.Name = "paterno";
-            this.paterno.ReadOnly = true;
-            this.paterno.Width = 150;
-            // 
-            // materno
-            // 
-            this.materno.HeaderText = "MATERNO";
-            this.materno.Name = "materno";
-            this.materno.ReadOnly = true;
-            this.materno.Width = 150;
-            // 
-            // fecha
-            // 
-            this.fecha.HeaderText = "FECHA";
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
-            this.fecha.Width = 70;
-            // 
-            // domicilio
-            // 
-            this.domicilio.HeaderText = "DOMICILIO";
-            this.domicilio.Name = "domicilio";
-            this.domicilio.ReadOnly = true;
-            this.domicilio.Width = 150;
-            // 
-            // distrito
-            // 
-            this.distrito.HeaderText = "DISTRITO";
-            this.distrito.Name = "distrito";
-            this.distrito.ReadOnly = true;
-            this.distrito.Width = 70;
-            // 
-            // colonia
-            // 
-            this.colonia.HeaderText = "COLONIA";
-            this.colonia.Name = "colonia";
-            this.colonia.ReadOnly = true;
-            // 
-            // cp
-            // 
-            this.cp.HeaderText = "CP";
-            this.cp.Name = "cp";
-            this.cp.ReadOnly = true;
-            this.cp.Width = 40;
-            // 
-            // ocupacion
-            // 
-            this.ocupacion.HeaderText = "OCUPACIÓN";
-            this.ocupacion.Name = "ocupacion";
-            this.ocupacion.ReadOnly = true;
-            // 
-            // numero
-            // 
-            this.numero.HeaderText = "NÚMERO";
-            this.numero.Name = "numero";
-            this.numero.ReadOnly = true;
-            this.numero.Width = 65;
-            // 
-            // ciudad
-            // 
-            this.ciudad.HeaderText = "CIUDAD";
-            this.ciudad.Name = "ciudad";
-            this.ciudad.ReadOnly = true;
-            this.ciudad.Width = 60;
-            // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "CÓDIGO";
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            this.codigo.Width = 120;
             // 
             // groupBox3
             // 
@@ -593,6 +466,154 @@
             this.button3.TabIndex = 7;
             this.button3.Text = "Reporte";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 47;
+            // 
+            // clave
+            // 
+            this.clave.HeaderText = "CLAVE";
+            this.clave.Name = "clave";
+            this.clave.ReadOnly = true;
+            this.clave.Width = 55;
+            // 
+            // nacio
+            // 
+            this.nacio.HeaderText = "NACIO";
+            this.nacio.Name = "nacio";
+            this.nacio.ReadOnly = true;
+            this.nacio.Width = 50;
+            // 
+            // estado
+            // 
+            this.estado.HeaderText = "ESTADO";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            this.estado.Width = 60;
+            // 
+            // genero
+            // 
+            this.genero.HeaderText = "SEXO";
+            this.genero.Name = "genero";
+            this.genero.ReadOnly = true;
+            this.genero.Width = 40;
+            // 
+            // local
+            // 
+            this.local.HeaderText = "LOCAL";
+            this.local.Name = "local";
+            this.local.ReadOnly = true;
+            this.local.Width = 50;
+            // 
+            // completo
+            // 
+            this.completo.HeaderText = "NOMBRE COMPLETO";
+            this.completo.Name = "completo";
+            this.completo.ReadOnly = true;
+            this.completo.Width = 300;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "NOMBRE(S)";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.Width = 150;
+            // 
+            // paterno
+            // 
+            this.paterno.HeaderText = "PATERNO";
+            this.paterno.Name = "paterno";
+            this.paterno.ReadOnly = true;
+            this.paterno.Width = 150;
+            // 
+            // materno
+            // 
+            this.materno.HeaderText = "MATERNO";
+            this.materno.Name = "materno";
+            this.materno.ReadOnly = true;
+            this.materno.Width = 150;
+            // 
+            // fecha
+            // 
+            this.fecha.HeaderText = "FECHA";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            this.fecha.Width = 70;
+            // 
+            // domicilio
+            // 
+            this.domicilio.HeaderText = "DOMICILIO";
+            this.domicilio.Name = "domicilio";
+            this.domicilio.ReadOnly = true;
+            this.domicilio.Width = 150;
+            // 
+            // distrito
+            // 
+            this.distrito.HeaderText = "DISTRITO";
+            this.distrito.Name = "distrito";
+            this.distrito.ReadOnly = true;
+            this.distrito.Width = 70;
+            // 
+            // colonia
+            // 
+            this.colonia.HeaderText = "COLONIA";
+            this.colonia.Name = "colonia";
+            this.colonia.ReadOnly = true;
+            // 
+            // cp
+            // 
+            this.cp.HeaderText = "CP";
+            this.cp.Name = "cp";
+            this.cp.ReadOnly = true;
+            this.cp.Width = 40;
+            // 
+            // ocupacion
+            // 
+            this.ocupacion.HeaderText = "OCUPACIÓN";
+            this.ocupacion.Name = "ocupacion";
+            this.ocupacion.ReadOnly = true;
+            // 
+            // numero
+            // 
+            this.numero.HeaderText = "NÚMERO";
+            this.numero.Name = "numero";
+            this.numero.ReadOnly = true;
+            this.numero.Width = 65;
+            // 
+            // ciudad
+            // 
+            this.ciudad.HeaderText = "CIUDAD";
+            this.ciudad.Name = "ciudad";
+            this.ciudad.ReadOnly = true;
+            this.ciudad.Width = 60;
+            // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "CÓDIGO";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            this.codigo.Width = 120;
+            // 
+            // STATUS
+            // 
+            this.STATUS.HeaderText = "STATUS";
+            this.STATUS.Name = "STATUS";
+            this.STATUS.ReadOnly = true;
+            // 
+            // checkBox14
+            // 
+            this.checkBox14.AutoSize = true;
+            this.checkBox14.Location = new System.Drawing.Point(273, 38);
+            this.checkBox14.Name = "checkBox14";
+            this.checkBox14.Size = new System.Drawing.Size(76, 17);
+            this.checkBox14.TabIndex = 5;
+            this.checkBox14.Text = "Eliminados";
+            this.checkBox14.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -655,6 +676,8 @@
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer2;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn clave;
         private System.Windows.Forms.DataGridViewTextBoxColumn nacio;
@@ -674,8 +697,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn ciudad;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STATUS;
+        private System.Windows.Forms.CheckBox checkBox14;
     }
 }
 

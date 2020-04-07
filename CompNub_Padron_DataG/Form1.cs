@@ -37,7 +37,8 @@ namespace CompNub_Padron_DataG
                             ocupaciones.ocupacion,
                             ciudadanos.numero,
                             ciudades.ciudad,
-                            ciudadanos.codigo
+                            ciudadanos.codigo,
+                            ciudadanos.status
 
                             from ciudadanos
 
@@ -91,9 +92,17 @@ namespace CompNub_Padron_DataG
                             inner join
                             ciudades
                             on ciudades.id = ciudadanos.ciudad) as a";
+
+        public static List<string> coloniasL = new List<string>();
+        public static List<string> cpL = new List<string>();
+        public static List<string> domiciliosL = new List<string>();
+
         public Form1()
         {
             InitializeComponent();
+            llenarLista(coloniasL, "colonias", "colonia");
+            llenarLista(cpL, "cp", "cp");
+            llenarLista(domiciliosL, "domicilios", "domicilio");
         }
 
         string cadconn = "Server=localhost; Database=optima_2; Uid=root; Pwd=12345678;";
@@ -124,8 +133,11 @@ namespace CompNub_Padron_DataG
         {
             bool rowColor = true;
             string g;
+            string s;
+            string habilitado = "";
             dataGridView1.Rows.Clear();
-            ConexionMySQL(query + " where a.completo like '%" + textBox1.Text + "%' " + alterQuery(textBox1.Text) + " limit "+ numericUpDown2.Value + "," + numericUpDown1.Value + ";");
+            if (!checkBox14.Checked) habilitado = " and a.status = 1 " ;
+            ConexionMySQL(query + " where a.completo like '%" + textBox1.Text + "%' " + habilitado + " " + alterQuery(textBox1.Text) + " limit "+ numericUpDown2.Value + "," + numericUpDown1.Value + ";");
             for (int i = 0; i < ds.Tables["tabla"].Rows.Count; i++)
             {
                 dataGridView1.Rows.Add();
@@ -149,8 +161,10 @@ namespace CompNub_Padron_DataG
                 dataGridView1.Rows[i].Cells[16].Value = Convert.ToString(ds.Tables["tabla"].Rows[i]["numero"]);
                 dataGridView1.Rows[i].Cells[17].Value = Convert.ToString(ds.Tables["tabla"].Rows[i]["ciudad"]);
                 dataGridView1.Rows[i].Cells[18].Value = Convert.ToString(ds.Tables["tabla"].Rows[i]["codigo"]);
+                if (ds.Tables["tabla"].Rows[i]["status"].ToString() == "True") s = "HABILITADO"; else s = "DESHABILITADO";
+                dataGridView1.Rows[i].Cells[19].Value = s;
 
-                if(rowColor) dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.White; else dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.LightGray;
+                if (rowColor) dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.White; else dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.LightGray;
                 rowColor = !rowColor;
             }
         }
@@ -240,6 +254,7 @@ namespace CompNub_Padron_DataG
                 ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[16].Value.ToString());
                 ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[17].Value.ToString());
                 ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[18].Value.ToString());
+                ciudadano.Add(dataGridView1.Rows[e.RowIndex].Cells[19].Value.ToString());
             }
             catch (Exception)
             {
@@ -252,6 +267,19 @@ namespace CompNub_Padron_DataG
         {
             List<string> ciudadano = new List<string>();
             Ciudadano window = new Ciudadano(ciudadano);
+            window.Show();
+        }
+
+        private void llenarLista(List<string> lista, string tabla, string campo)
+        {
+            ConexionMySQL("select " + campo + " from " + tabla + " order by " + campo + ";");
+            lista.Add("");
+            for (int i = 0; i < ds.Tables["tabla"].Rows.Count; i++) lista.Add(Convert.ToString(ds.Tables["tabla"].Rows[i][campo]));
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Reportes window = new Reportes();
             window.Show();
         }
     }

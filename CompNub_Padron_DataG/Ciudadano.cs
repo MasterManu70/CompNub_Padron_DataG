@@ -17,14 +17,26 @@ namespace CompNub_Padron_DataG
         List<string> ciudadano = new List<string>();
         //[0] = "id", [1] = "clave", [2] = "nacio", [3] = "estado", [4] = "genero", [5] = "local" 
         //[6] = "nombre", [7] = "paterno",  [8] = "materno",  [9] = "fecha",  [10] = "domicilio", [11] = "distrito",
-        //[12] = "colonia",  [13] = "cp",  [14] = "ocupacion",  [15] = "numero", [16] = "ciudad", [17] = "código",
+        //[12] = "colonia",  [13] = "cp",  [14] = "ocupacion",  [15] = "numero", [16] = "ciudad", [17] = "código", [18] = "status"
         public Ciudadano(List<string> ciudadano)
         {
             InitializeComponent();
-            for (int i = 1; i <= 31; i++) comboBox6.Items.Add(i); //Días
-            for (int i = 1; i <= 12; i++) comboBox7.Items.Add(i); //Meses
+            for (int i = 1; i <= 31; i++) comboBox6.Items.Add(i.ToString("00")); //Días
+            for (int i = 1; i <= 12; i++) comboBox7.Items.Add(i.ToString("00")); //Meses
             for (int i = 1900; i <= 2020; i++) comboBox2.Items.Add(i); //Años
- 
+
+            comboBox12.Items.Add("Ama de casa");
+            comboBox12.Items.Add("Empleado");
+            comboBox12.Items.Add("Jornalero o Peon");
+            comboBox12.Items.Add("Trabajador por su cuenta");
+            comboBox12.Items.Add("Estudiante");
+            comboBox12.Items.Add("Obrero");
+            comboBox12.Items.Add("Jubilado o Incapacitado");
+            comboBox12.Items.Add("Buscador de trabajo");
+            comboBox12.Items.Add("Otros");
+            comboBox12.Items.Add("Patron o Empresario");
+            comboBox12.Items.Add("Ejidatario o Cooperativista");
+
             if (ciudadano.Count > 1)
             {
                 this.ciudadano = ciudadano;
@@ -51,6 +63,8 @@ namespace CompNub_Padron_DataG
                 textBox3.Text = ciudadano[15];
                 comboBox13.Text = ciudadano[16];
                 comboBox14.Text = ciudadano[17];
+
+                if (ciudadano[18] == "HABILITADO") checkBox1.Checked = true;
 
                 textBox3.Enabled = false;
             }
@@ -84,8 +98,10 @@ namespace CompNub_Padron_DataG
             if (!camposVacios()) return;
 
             int genero = 1;
+            int habilitado = 1;
 
             if (radioButton1.Checked) genero = 1; else genero = 0;
+            if (checkBox1.Checked) habilitado = 1; else habilitado = 0;
 
             if (Convert.ToInt32(textBox1.Text) == 0)
             {
@@ -106,7 +122,8 @@ namespace CompNub_Padron_DataG
                     + tableSelector("ocupaciones", "ocupacion", comboBox12.Text) + ",'"
                     + textBox3.Text + "',"
                     + tableSelector("ciudades", "ciudad", comboBox13.Text) + ",'"
-                    + comboBox14.Text + "');"
+                    + comboBox14.Text + "',"
+                    + habilitado + ");"
                     );
 
                 MessageBox.Show("El registro ha sido agregado exitosamente.");
@@ -127,7 +144,9 @@ namespace CompNub_Padron_DataG
                     + "colonia=" + tableSelector("colonias", "colonia", comboBox10.Text) + ","
                     + "cp=" + tableSelector("cp", "cp", comboBox11.Text) + ","
                     + "ciudad=" + tableSelector("ciudades", "ciudad", comboBox13.Text) + ","
-                    + "codigo='" + comboBox14.Text + "' where id=" + textBox1.Text + ";"
+                    + "codigo='" + comboBox14.Text + "',"
+                    + "status=" + habilitado
+                    + " where id=" + textBox1.Text + ";"
                     );
                 MessageBox.Show("El registro ha sido modificado exitosamente.");
             }
@@ -269,6 +288,30 @@ namespace CompNub_Padron_DataG
                 return false;
             }
             return true;
+        }
+
+        List<string> buscarProvider(string tabla, string campo, string texto)
+        {
+            List<string> lista = new List<string>();
+            ConexionMySQL("select " + campo + " from (select " + campo + " from " + tabla + " where " + campo + " like '%" + texto + "%' limit 10) as tabla order by " + campo + ";");
+            try
+            {
+                for (int i = 0; i < ds.Tables["tabla"].Rows.Count; i++) lista.Add(Convert.ToString(ds.Tables["tabla"].Rows[i][campo]));
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return lista;
+        }
+
+        private void comboBox3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue != Convert.ToChar(Keys.Up) && e.KeyValue != Convert.ToChar(Keys.Down) && e.KeyValue != Convert.ToChar(Keys.Left) && e.KeyValue != Convert.ToChar(Keys.Right) && e.KeyValue != Convert.ToChar(Keys.Back))
+            {
+                comboBox3.DataSource = buscarProvider("acronimos", "acronimo", comboBox3.Text);
+                comboBox3.DroppedDown = true;
+            }
         }
     }
 }
